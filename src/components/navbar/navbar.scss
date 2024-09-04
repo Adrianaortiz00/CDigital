@@ -1,0 +1,44 @@
+@import "styles";
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $white;
+  padding: 2.188rem 4.875rem 2.188rem 1.688rem;
+  @include text-inter-ExtraBold(25px, $black);
+  height: auto;
+}
+
+.logoImage {
+  width: 15.625rem;
+  height: 4.352rem;
+}
+.info {
+    display: flex;
+    align-items: center;
+    gap: 2.438rem; /* Espacio entre los elementos */
+
+}
+.info span {
+    cursor: pointer;
+  }
+  
+  .enterButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: $grey;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    @include text-inter-ExtraBold(25px, $white);
+  }
+  
+  .enterButton img {
+    height: 1.974rem;
+    width: 2.103rem ;
+
+  }
