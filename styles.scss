@@ -1,0 +1,47 @@
+/* Color Variables */
+
+$grey: #353A49;
+$white: #ffffff;
+$black: #000000;                                       
+$font-size: 20px;
+
+@mixin text-inter-regular($font-size, $color) {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: $font-size;
+  color: $color;
+}
+
+@mixin text-inter-bold($font-size, $color) {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: $font-size;
+  color: $color;
+  align-items: left;
+}
+
+@mixin text-inter-ExtraBold($font-size, $color) {
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+    font-size: $font-size;
+    align-items: left;
+    color: $color;
+  }
+
+
+body {
+  @include text-inter-ExtraBold(1.563rem, $black );
+  margin: 0;
+  padding: 0;
+}
+
+
+main {
+  height: 100vh;
+}
+
+button {
+    cursor: pointer;
+}

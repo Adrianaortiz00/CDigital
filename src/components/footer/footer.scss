@@ -1,0 +1,15 @@
+@import "styles";
+
+.footer {
+    background: $white;
+  display: flex;
+  justify-content: flex-start; /* Centra los íconos horizontalmente */
+  padding: 1rem 0; /* Espaciado alrededor del footer */
+  margin-top: auto; /* Empuja el footer al final del contenedor */
+}
+
+.footer img {
+  margin: 0 1rem; /* Espaciado entre los íconos */
+  width: 2rem; /* Ajusta el tamaño de los íconos */
+  height: auto;
+}

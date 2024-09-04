@@ -1,0 +1,47 @@
+@import "styles";
+
+.home {
+  background: linear-gradient(90deg, #366cf9, #2b45a7, #142b4b);
+  display: flex;
+  justify-content: space-between;
+  height: 71.25rem;
+  padding-left: 4.939rem;
+}
+.content {
+  max-width: 40%;
+}
+.title {
+  padding-top: 6.375rem;
+  @include text-inter-ExtraBold(45px, $white);
+}
+
+.text {
+  margin-bottom: 15px;
+  @include text-inter-regular(32px, $white);
+}
+
+.imageContainer {
+  padding-right: 3.938rem;
+  align-content: center;
+}
+
+.image {
+  width: 38.688rem;
+  height: 37.125rem;
+}
+
+.registerButton {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 0.75rem 0.75rem 0.938rem;
+  cursor: pointer;
+  background-color: $white;
+  border: none;
+  border-radius: 10px;
+  @include text-inter-ExtraBold(25px, $black);
+  width: 12.5rem;
+  height: 3.75rem;
+  margin-top: 5.875rem;
+}
+
+
