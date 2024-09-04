@@ -1,15 +1,16 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import App from "./App.jsx";
-import "./index.css";
 import { QueryClient } from "react-query";
+import router from "./router/router";
+import { RouterProvider } from "react-router-dom";
+import ReactDOM from "react-dom/client"
+import { AuthProvider } from "./context/authContext";
+import { QueryClientProvider } from "react-query";
 
 const queryClient = new QueryClient();
 
-createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <AuthProvider>
-    <StrictMode>
-      <App />
-    </StrictMode>
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
   </AuthProvider>
 );
