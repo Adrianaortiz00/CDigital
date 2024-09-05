@@ -1,15 +1,35 @@
 @import "styles";
 
 .footer {
-    background: $white;
-  display: flex;
-  justify-content: flex-start; /* Centra los íconos horizontalmente */
-  padding: 1rem 0; /* Espaciado alrededor del footer */
-  margin-top: auto; /* Empuja el footer al final del contenedor */
-}
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: $white;
+    padding: 0.625rem 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 4.939rem;
+    padding-top: 0.5rem;
 
-.footer img {
-  margin: 0 1rem; /* Espaciado entre los íconos */
-  width: 2rem; /* Ajusta el tamaño de los íconos */
-  height: auto;
-}
+  }
+  
+  .footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2.563rem; 
+  }
+  
+  .footer-icons img {
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+  
+
+  @media screen and (max-width: 768px){
+    .footer {
+        position: absolute;
+        padding-left: 3rem;
+      }
+  }
+  

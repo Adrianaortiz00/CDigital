@@ -1,0 +1,15 @@
+@import "../../../styles.scss";
+
+.formTitle {
+    width: 100%;
+    text-align: center;
+    border-bottom: solid 0.25rem $blue;
+    margin-bottom: 2.5rem;
+    
+  
+    h2 {
+      @include text-inter-ExtraBold(1.625rem, $grey-titile);
+      padding: 0.125rem;
+
+    }
+  }

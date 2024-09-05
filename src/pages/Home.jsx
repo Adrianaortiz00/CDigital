@@ -6,7 +6,7 @@ const Home = () => {
     <div className="home">
       <div className="content">
       <p className="title">Digitaliza y Automatiza basado en experiencia</p>
-      <p className="text">Llevamos a cabo proyectos de automatización y digitalización con herramientas de Microsoft Power Platform y UX para mejor</p>
+      <p className="text">Llevamos a cabo proyectos de automatización y digitalización con herramientas de Microsoft Power Platform y UX para mejorar la productividad de las organizaciones.</p>
       <button className="registerButton">Registrarse</button>
       </div>
       <div className="imageContainer">

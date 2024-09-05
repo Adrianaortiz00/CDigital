@@ -1,22 +1,24 @@
 @import "styles";
 
 .home {
-  background: linear-gradient(90deg, #366cf9, #2b45a7, #142b4b);
+  background: linear-gradient(180deg, #366cf9, #2b45a7, #142b4b);
   display: flex;
   justify-content: space-between;
-  height: 71.25rem;
-  padding-left: 4.939rem;
+  height: 55rem;
+  flex-direction: row;
 }
 .content {
   max-width: 40%;
+  padding-left: 4.939rem;
 }
 .title {
-  padding-top: 6.375rem;
+  padding-top: 3rem;
   @include text-inter-ExtraBold(45px, $white);
 }
 
 .text {
   margin-bottom: 15px;
+  width: 27.625rem;
   @include text-inter-regular(32px, $white);
 }
 
@@ -45,3 +47,108 @@
 }
 
 
+/* Estilos para tablets (768px a 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .home {
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+    padding: 3rem;
+  }
+
+  .content {
+    max-width: 80%;
+    text-align: left;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .title {
+    @include text-inter-ExtraBold(35px, $white); 
+    padding-top: 0.5rem;
+  }
+
+  .text {
+    width: auto;
+    @include text-inter-regular(24px, $white);
+    margin-bottom: 2rem;
+  }
+
+  .imageContainer {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .image {
+    width: 30rem;
+    height: auto;
+  }
+
+  .registerButton {
+    margin-top: 0;
+    width: auto;
+    padding: 0.75rem 1.5rem;
+    font-size: 20px;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    bottom: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Estilos para móviles (menos de 768px) */
+
+ @media screen and (max-width: 768px) {
+  .home {
+    
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+    height: 49.875rem;
+    padding: 2.813rem;
+    width: 24.563rem;
+  }
+
+  .content {
+    max-width: 100%;
+    padding-left: 0;
+    text-align: left;
+  }
+
+  .title {
+    @include text-inter-ExtraBold(25px, $white);
+    padding: 0;
+    margin: 0;
+    width: 19.938rem;
+  }
+
+  .text {
+    width: 18.688rem;
+    margin-bottom: 5rem;
+    @include text-inter-regular(22px, $white);
+  }
+
+  .imageContainer {
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+    max-width: 20rem;
+  }
+
+  .registerButton {
+    margin-bottom: 5rem;
+    width: 100%;
+    max-width: 15rem;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+  }
+} 

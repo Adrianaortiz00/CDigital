@@ -1,0 +1,45 @@
+@import "../../../styles.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container label {
+  font-weight: 600;
+  font-size: 20px;
+  color: $black;
+  margin-top: 20px;
+}
+
+.nameInput {
+  border: 1px solid $blue;
+  border-radius: 1.25rem;
+  padding: 0.313rem 0.313rem 0.313rem 1rem;
+  background-color: $white;
+  margin-top: 0.813rem;
+
+
+  &::placeholder {
+    color: $grey-titile;
+    opacity: 1;
+  }
+}
+
+.nameInput:focus {
+  outline: none;
+}
+
+.nameInput {
+  width: 25rem;
+  height: 2.5rem;
+}
+
+.invalidInputText {
+  margin: 0 auto;
+  width: 18.75rem;
+  height: 0.688rem;
+  color: $blue;
+  font-size: 1rem;
+  font-weight: 400;
+}
