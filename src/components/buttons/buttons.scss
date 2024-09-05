@@ -1,0 +1,24 @@
+@import "../../../styles.scss";
+
+.buttonsContainer {
+    display: flex;
+    gap: 1.5rem;
+    padding-top: 3.813rem;
+    .btn {
+        @include text-inter-bold(1.25rem, $white);
+      border-radius: 1.25rem;
+      border: none;
+      height: 3.125rem;
+      width: 9.375rem;
+ 
+    }
+  
+    .acept {
+        background-color: $blue;
+      }
+    
+      .cancel {
+        background-color: $blue;
+      }
+  
+  }

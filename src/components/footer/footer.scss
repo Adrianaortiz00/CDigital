@@ -10,6 +10,7 @@
     justify-content: left;
     align-items: center;
     padding-left: 4.939rem;
+    padding-top: 0.5rem;
 
   }
   
@@ -22,5 +23,13 @@
   .footer-icons img {
     width: 1.875rem;
     height: 1.875rem;
+  }
+  
+
+  @media screen and (max-width: 768px){
+    .footer {
+        position: absolute;
+        padding-left: 3rem;
+      }
   }
   

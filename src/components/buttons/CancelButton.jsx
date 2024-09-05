@@ -1,11 +1,16 @@
-import React from 'react'
+import { Link } from "react-router-dom";
+import "./buttons.scss";
 
-const CancelButton = () => {
+const CancelButton = ({ onCancel }) => {
   return (
-    <div>
-      
+    <div className="buttonsContainer">
+      <Link to="/">
+        <button className="btn cancel" onClick={onCancel}>
+          Cancelar
+        </button>
+      </Link>
     </div>
-  )
-}
+  );
+};
 
-export default CancelButton
+export default CancelButton;
