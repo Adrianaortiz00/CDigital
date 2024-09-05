@@ -1,7 +1,7 @@
 import Title from "../labels/Title";
 import Field from "../labels/Field";
 import Buttons from "../buttons/Buttons";
-import "./registerCard.scss";
+import "./register.scss";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 

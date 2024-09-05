@@ -1,9 +1,10 @@
-import RegisterCard from "../components/cards/RegisterCard"
+import Login from "../components/cards/Login"
+
 
 
 const LogIn = () => {
   return (
-      <RegisterCard></RegisterCard>
+      <Login></Login>
   )
 }
 
