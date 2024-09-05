@@ -7,8 +7,8 @@ const Navbar = () => {
         <img className="logoImage" src="/assets/CDigital_Completo-cortado.png" alt="logo" />
       </div>
       <div className="info">
-        <span>Acerca de</span>
-        <span>Servicios</span>
+        <span className="textNavbar">Acerca de</span>
+        <span className="textNavbar">Servicios</span>
         <button className="enterButton">
           Entrar
           <img src="/assets/Avatar-icon.svg" alt="avatar" />
