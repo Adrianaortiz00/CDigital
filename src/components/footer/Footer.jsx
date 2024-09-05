@@ -1,13 +1,15 @@
-import "./footer.scss"
+import "./footer.scss";
 
 const Footer = () => {
   return (
-    <div className="footer-icons">
-        <img src="./icons/SM-facebook.svg" alt="youtube" />
-        <img src="./icons/SM-instagram.svg" alt="instagram" />
+    <footer className="footer">
+      <div className="footer-icons">
         <img src="./icons/SM-youtube.svg" alt="facebook" />
-    </div>
-  )
-}
+        <img src="./icons/SM-instagram.svg" alt="instagram" />
+        <img src="./icons/SM-facebook.svg" alt="youtube" />
+      </div>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;
