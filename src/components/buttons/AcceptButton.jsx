@@ -1,4 +1,5 @@
 import "./buttons.scss"
+import "../../../styles.scss"
 
 const AcceptButton = () => {
   return (

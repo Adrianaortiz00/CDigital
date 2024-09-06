@@ -20,6 +20,7 @@
   margin-bottom: 15px;
   width: 27.625rem;
   @include text-inter-regular(32px, $white);
+  text-decoration: none;
 }
 
 .imageContainer {
@@ -39,6 +40,7 @@
   cursor: pointer;
   background-color: $white;
   border: none;
+  text-decoration: none;
   border-radius: 10px;
   @include text-inter-ExtraBold(25px, $black);
   width: 12.5rem;
@@ -65,7 +67,7 @@
   }
 
   .title {
-    @include text-inter-ExtraBold(35px, $white); 
+    @include text-inter-ExtraBold(35px, $white);
     padding-top: 0.5rem;
   }
 
@@ -100,9 +102,8 @@
 
 /* Estilos para móviles (menos de 768px) */
 
- @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .home {
-    
     flex-direction: column;
     justify-content: start;
     align-items: center;
@@ -151,4 +152,4 @@
     position: absolute;
     bottom: 0;
   }
-} 
+}

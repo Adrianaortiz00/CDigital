@@ -4,7 +4,7 @@ import "./buttons.scss"
 
 const HomeButton = () => {
   return (
-    <Link to="/">
+    <Link to="/" className="linkButton">
             <button className="enterButton">
               Inicio
               <img src="/assets/Home-icon.svg" alt="avatar" />

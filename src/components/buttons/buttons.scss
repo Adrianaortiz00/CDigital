@@ -1,26 +1,86 @@
 @import "../../../styles.scss";
 
 .buttonsContainer {
-    display: flex;
-    gap: 1.5rem;
-    padding-top: 3.813rem;
-    padding-bottom: 10px;
- 
-    .btn {
-        @include text-inter-bold(1.25rem, $white);
-      border-radius: 1.25rem;
-      border: none;
-      height: 3.125rem;
-      width: 9.375rem;
-      
-    }
-  
-    .acept {
-        background-color: $blue;
-      }
-    
-      .cancel {
-        background-color: $blue;
-      }
-  
+  display: flex;
+  gap: 1.5rem;
+  padding-top: 3.813rem;
+  padding-bottom: 10px;
+  text-decoration: none;
+
+  .btn {
+    @include text-inter-bold(1.25rem, $white);
+    border-radius: 1.25rem;
+    border: none;
+    height: 3.125rem;
+    width: 9.375rem;
+    text-decoration: none;
+    background-color: transparent; 
+
+
   }
+.linkButton {
+  :link:hover,
+  :focus,
+  :active,
+  :visited,
+  :link {
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+    color: inherit;
+  }
+}
+  
+
+  button {
+    background: transparent;
+    border: none;
+  }
+
+
+  .acept {
+    background-color: $blue;
+  }
+
+  .cancel {
+    background-color: $blue;
+  }
+
+  a {
+    text-decoration: none;
+
+    a:link,
+    a:visited {
+        color: inherit; // Evita cambios de color en los enlaces
+        text-decoration: none; // Elimina el subrayado
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+  .enterButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: $grey;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    @include text-inter-ExtraBold(25px, $white);
+
+
+
+  }
+  
+  .enterButton img {
+    height: 1.974rem;
+    width: 2.103rem;
+  }
+}
