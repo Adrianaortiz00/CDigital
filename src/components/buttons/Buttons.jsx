@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./buttons.scss"
+import "../../../styles.scss"
 
 const Buttons = ({onAccept, onCancel}) => {
   return (

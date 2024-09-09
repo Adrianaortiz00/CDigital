@@ -3,6 +3,7 @@ import HomeButton from "../buttons/HomeButton";
 import LogOutButton from "../buttons/LogOutButton";
 import { useAuth } from "../../context/authContext";
 import { useLocation } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 const Navbar = () => {
   const { userId } = useAuth();
@@ -24,10 +25,12 @@ const Navbar = () => {
           <>
             <span className="textNavbar">Acerca de</span>
             <span className="textNavbar">Servicios</span>
+            <Link to={"/login"} className="LinkEnter">
             <button className="enterButton">
               Entrar
               <img src="/assets/Avatar-icon.svg" alt="avatar" />
             </button>
+            </Link>
           </>
         )}
 

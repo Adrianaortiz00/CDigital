@@ -1,6 +1,7 @@
 import "./buttons.scss"
+import "../../../styles.scss"
 
-const AcceptButton = () => {
+const AcceptButton = ({onAccept}) => {
   return (
     <div className="buttonsContainer">
       <button className="btn acept" onClick={onAccept}>

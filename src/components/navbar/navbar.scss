@@ -1,5 +1,6 @@
 @import "styles";
 
+
 .navContainer {
   display: flex;
   align-items: center;
@@ -40,6 +41,11 @@
   height: 1.974rem;
   width: 2.103rem;
 }
+
+.LinkEnter{
+  text-decoration: none;
+}
+
 
 @media screen and (max-width: 768px) {
   .navContainer {

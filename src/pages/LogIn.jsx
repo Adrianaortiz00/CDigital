@@ -1,11 +1,7 @@
-import Login from "../components/cards/Login"
-
-
+import Login from "../components/form/Login";
 
 const LogIn = () => {
-  return (
-      <Login></Login>
-  )
-}
+  return <Login></Login>;
+};
 
-export default LogIn
+export default LogIn;

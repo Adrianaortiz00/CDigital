@@ -3,8 +3,18 @@ import Title from "../labels/Title";
 import Buttons from "../buttons/Buttons";
 import Field from "../labels/Field";
 import { useState } from "react";
+import Confirmation from "../confirmation/Confirmation";
+import { useNavigate } from "react-router-dom";
+import { API_POST_LOG_USER } from "../../config/url";
+import { useAuth } from "../../context/authContext";
+import { useMutation } from "react-query";
+import AcceptButton from "../buttons/AcceptButton"
+import axios from "axios";
 
 const Login = () => {
+  const navigator = useNavigate();
+  const { setToken, setUserId, token } = useAuth();
+  const [isOpen, setIsOpen] = useState(false);
   const [form, setForm] = useState({
     email: "",
     password: "",
@@ -12,6 +22,17 @@ const Login = () => {
   const [errors, setErrors] = useState({
     email: "",
     password: "",
+  });
+
+  const mutation = useMutation((data) => axios.post(API_POST_LOG_USER, data), {
+    onSuccess: (response) => {
+      setToken(response.data.token);
+      setUserId(response.data.userId);
+      setIsOpen(true);
+    },
+    onError: (error) => {
+      console.error("Error al iniciar sesión:", error);
+    },
   });
 
   const handleChange = (e) => {
@@ -34,6 +55,12 @@ const Login = () => {
     navigator("/");
   };
 
+  const handleAccept = () => {
+    setIsOpen(false);
+    navigator("/Courses");
+  };
+
+
   const validateForm = () => {
     let valid = true;
     const errorsCopy = { ...errors };
@@ -55,6 +82,7 @@ const Login = () => {
     setErrors(errorsCopy);
     return valid;
   };
+  const axiosErrorResponse = mutation.error?.response;
 
   return (
     <div className="containerForm">
@@ -80,7 +108,24 @@ const Login = () => {
           onchange={handleChange}
           error={errors.password}
         />
-        <Buttons onAccept={handleLogin} onCancel={handleCancel} />
+        <br />
+      <Buttons onAccept={handleLogin} onCancel={handleCancel} />
+      {axiosErrorResponse?.status === 401 && (
+        <p className="invalidInputText">Contraseña incorrecta.</p>
+      )}
+      {axiosErrorResponse?.status === 404 && (
+        <p className="invalidInputText">
+          La dirección de correo electrónico no esta registrada.
+        </p>
+      )}
+      {token && (
+        <Confirmation open={isOpen} onClose={() => setIsOpen(false)}>
+          <h2 className="message">Bienvenido al curso educativo de CDigital</h2>
+          <div className="buttonsContainer">
+            <AcceptButton onAccept={handleAccept} />
+          </div>
+        </Confirmation>
+        )}
       </form>
     </div>
   );
