@@ -3,9 +3,8 @@
 .buttonsContainer {
   display: flex;
   gap: 1.5rem;
-  padding-top: 3.813rem;
-  padding-bottom: 10px;
   text-decoration: none;
+  padding-bottom: 15px;
 
   .btn {
     @include text-inter-bold(1.25rem, $white);
@@ -19,16 +18,8 @@
 
   }
 .linkButton {
-  :link:hover,
-  :focus,
-  :active,
-  :visited,
-  :link {
-    text-decoration: none;
-    outline: none;
-    box-shadow: none;
-    color: inherit;
-  }
+  text-decoration: none;
+  outline: none;
 }
   
 

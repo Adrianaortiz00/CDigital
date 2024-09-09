@@ -3,9 +3,17 @@ import Field from "../labels/Field";
 import Buttons from "../buttons/Buttons";
 import "./register.scss";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
+import axios from "axios";
+import AcceptButton from "../buttons/AcceptButton"
+import Confirmation from "../confirmation/Confirmation";
+import { useMutation } from "react-query";
+import { API_POST_USER } from "../../config/url";
+
 
 const RegisterCard = () => {
+  const navigator = useNavigate();
+  const [openConfirmation, setOpenConfirmation] = useState(false);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -15,6 +23,14 @@ const RegisterCard = () => {
     name: "",
     email: "",
     password: "",
+  });
+  const mutation = useMutation((data) => axios.post(API_POST_USER, data), {
+    onSuccess: () => {
+      setOpenConfirmation(true);
+    },
+    onError: (error) => {
+      console.error("Error al iniciar sesión:", error);
+    },
   });
 
   const handleChange = (e) => {
@@ -34,6 +50,11 @@ const RegisterCard = () => {
 
   const handleCancel = () => {
     setForm({ name: "", email: "", password: "" });
+    navigator("/");
+  };
+
+  const handleAccept = () => {
+    setopenConfirmation(false);
     navigator("/");
   };
 
@@ -65,6 +86,8 @@ const RegisterCard = () => {
     setErrors(errorsCopy);
     return valid;
   };
+
+  const axiosErrorResponse = mutation.error?.response;
 
   return (
     <div className="containerForm">
@@ -106,6 +129,17 @@ const RegisterCard = () => {
           <Link to={"/login"}>aquí</Link>
         </span>
       </h3>
+      {axiosErrorResponse?.status === 409 && (
+        <p className="invalidInputText">Correo electrónico ya en uso.</p>
+      )}
+      {openConfirmation && (
+        <Confirmation open={openConfirmation} onClose={() => setOpenConfirmation(false)}>
+          <h2 className="message">Usuario registrado exitosamente!</h2>
+          <div className="buttonsContainer">
+            <AcceptButton onAccept={handleAccept} />
+          </div>
+        </Confirmation>
+        )}
     </form>
     </div>
 
