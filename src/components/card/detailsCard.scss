@@ -1,0 +1,36 @@
+@import "styles";
+
+.detailCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: $white;
+    border: 1px solid $black;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+    .videoContainer {
+      width: 100%;
+      margin-bottom: 1.5rem;
+  
+      video {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+    }
+  
+    .detailInfo {
+      text-align: center;
+  
+      h2 {
+        margin-bottom: 1rem;
+        @include text-inter-ExtraBold(1.5rem, $blue);
+      }
+  
+      p {
+        @include text-inter-regular(1rem, $grey);
+      }
+    }
+  }
