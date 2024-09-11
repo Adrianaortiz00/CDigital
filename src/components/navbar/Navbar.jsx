@@ -28,7 +28,7 @@ const Navbar = () => {
             <Link to={"/login"} className="LinkEnter">
             <button className="enterButton">
               Entrar
-              <img src="/assets/Avatar-icon.svg" alt="avatar" />
+              <img src="./icons/Avatar-icon.svg" alt="avatar" />
             </button>
             </Link>
           </>

@@ -2,7 +2,8 @@
 
 .coursesPage {
     padding: 2rem;
-    background-color: $blue;
+    background: linear-gradient(180deg, #366cf9, #2b45a7, #142b4b);
+    height: 55rem;
     
     .coursesGrid {
       display: grid;
