@@ -11,7 +11,7 @@ const Home = () => {
       <SignIButton></SignIButton>
       </div>
       <div className="imageContainer">
-        <img  className="image" src="/assets/imageHome.png" alt="image home" />
+        <img  className="image" src="./assets/imageHome.png" alt="image home" />
       </div>
       <Footer/>
     </div>

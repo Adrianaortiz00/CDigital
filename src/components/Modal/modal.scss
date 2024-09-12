@@ -1,0 +1,104 @@
+@import "../../../styles.scss";
+
+
+
+@import "../../../styles.scss";
+
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  width: 80%;
+  max-width: 37.5rem;
+  position: relative;
+  justify-content: center;
+
+  h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    @include text-inter-bold(1.25rem, $blue);
+  }
+
+  h3 {
+    @include text-inter-regular(1.25rem, $grey);
+  }
+
+  .editInput,
+  .editTextarea {
+    width: 100%;
+    padding: 0.625rem;
+    margin-bottom:0.938rem;
+    border: 0.063rem solid #ccc;
+    border-radius: 0.375rem;
+    box-sizing: border-box;
+    @include text-inter-regular(0.875rem, $grey);
+    
+    &:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+  }
+
+  .editTextarea {
+    height: 6.25rem;
+    resize: vertical;
+  }
+
+  /* Agrupa los botones para centrar */
+  .button-container {
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    margin-top: 1.25rem;
+  }
+
+  .saveButton,
+  .cancelButton {
+    padding: 0.625rem 1.25rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin: 0.313rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .saveButton {
+    background-color: $white;
+    color: $blue;
+    border: 1px solid $blue;
+
+    &:hover {
+      background-color: $sky-blue;
+      color: $white;
+    }
+  }
+
+  .cancelButton {
+    background-color: $blue;
+    color: #fff;
+    @include text-inter-regular(0.875rem, $white);
+
+    &:hover {
+      background-color: $sky-blue;
+    }
+  }
+}
+
+
+  

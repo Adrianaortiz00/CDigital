@@ -1,35 +1,32 @@
 @import "styles";
 
 .footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: $white;
-    padding: 0.625rem 0;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    padding-left: 4.939rem;
-    padding-top: 0.5rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: $white;
+  padding: 0.625rem 0;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 4.939rem;
+  padding-top: 0.5rem;
+}
 
-  }
-  
-  .footer-icons {
-    display: flex;
-    justify-content: center;
-    gap: 2.563rem; 
-  }
-  
-  .footer-icons img {
-    width: 1.875rem;
-    height: 1.875rem;
-  }
-  
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2.563rem;
+}
 
-  @media screen and (max-width: 768px){
-    .footer {
-        position: absolute;
-        padding-left: 3rem;
-      }
+.footer-icons img {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    position: absolute;
+    padding-left: 3rem;
   }
-  
+}

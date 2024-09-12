@@ -1,0 +1,13 @@
+@import "styles";
+
+.coursesPage {
+    padding: 2rem;
+    background: linear-gradient(180deg, #366cf9, #2b45a7, #142b4b);
+    min-height: 100vh;
+    
+    .coursesGrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+  }

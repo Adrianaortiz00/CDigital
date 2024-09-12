@@ -7,7 +7,7 @@ const HomeButton = () => {
     <Link to="/" className="linkButton">
             <button className="enterButton">
               Inicio
-              <img src="/assets/Home-icon.svg" alt="avatar" />
+              <img src="./icons/Home-icon.svg"   alt="avatar" />
             </button>
     </Link>
   )

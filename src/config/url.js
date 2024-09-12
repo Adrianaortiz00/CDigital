@@ -1,15 +1,9 @@
 export const API_BASE_URL = "http://localhost:3001/api/";
 
-export const API_GET_TRAVELS = API_BASE_URL + "cdigital";
+export const API_GET_COURSES = API_BASE_URL + "courses";
 
 export const API_POST_USER = API_BASE_URL + "users/register"
 
 export const API_POST_LOG_USER = API_BASE_URL + "users/login"
 
-
-/* export const API_GET_TRAVEL = (id) => API_BASE_URL + "travel/" + id;
-
-export const API_PUT_TRAVEL = (id) => API_BASE_URL + "travel/" + id;
-export const API_POST_TRAVEL = API_BASE_URL + "travel";
-
-export const API_GET_USER_ID = API_BASE_URL + "users/user"  */
+export const API_GET_LOG_USER = API_BASE_URL + "users/login"

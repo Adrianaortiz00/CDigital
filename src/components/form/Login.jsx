@@ -13,7 +13,7 @@ import axios from "axios";
 
 const Login = () => {
   const navigator = useNavigate();
-  const { setToken, setUserId, token } = useAuth();
+  const { setToken, setUserId, token, setUserRole } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
   const [form, setForm] = useState({
     email: "",
@@ -26,8 +26,13 @@ const Login = () => {
 
   const mutation = useMutation((data) => axios.post(API_POST_LOG_USER, data), {
     onSuccess: (response) => {
+
       setToken(response.data.token);
       setUserId(response.data.userId);
+      setUserRole(response.data.userRole);
+      localStorage.setItem("token", response.data.token);
+      localStorage.setItem("loggedInUserId", response.data.userId);
+      localStorage.setItem("userRole", response.data.userRole);
       setIsOpen(true);
     },
     onError: (error) => {
