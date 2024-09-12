@@ -1,7 +1,7 @@
-import "./confirmation.scss"
+import "./confirmation.scss";
 
 const Confirmation = ({ open, children }) => {
-    if (!open) return null;
+  if (!open) return null;
 
   return (
     <div className="confirmation isopen">

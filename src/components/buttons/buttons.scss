@@ -19,6 +19,7 @@
   }
 .linkButton {
   text-decoration: none;
+  list-style: none;
   outline: none;
 }
   
@@ -75,3 +76,11 @@
     width: 2.103rem;
   }
 }
+
+.logOutButton{
+  background-color: $grey;
+  color: $white;
+  border-radius: 5px;
+  padding-right: 10px;
+}
+

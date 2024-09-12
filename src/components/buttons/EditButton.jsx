@@ -1,6 +1,6 @@
 import "../card/detailsCard.scss"
 
-const EditButton = ({onClick}) => {
+const EditButton = ({ onClick }) => {
 
   return (
     <button  className="icon-container" onClick={onClick} >

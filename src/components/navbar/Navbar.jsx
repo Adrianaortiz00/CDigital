@@ -3,7 +3,7 @@ import HomeButton from "../buttons/HomeButton";
 import LogOutButton from "../buttons/LogOutButton";
 import { useAuth } from "../../context/authContext";
 import { useLocation } from "react-router-dom";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const { userId } = useAuth();
@@ -26,19 +26,26 @@ const Navbar = () => {
             <span className="textNavbar">Acerca de</span>
             <span className="textNavbar">Servicios</span>
             <Link to={"/login"} className="LinkEnter">
-            <button className="enterButton">
-              Entrar
-              <img src="./icons/Avatar-icon.svg" alt="avatar" />
-            </button>
+              <button className="enterButton">
+                Entrar
+                <img src="./icons/Avatar-icon.svg" alt="avatar" />
+              </button>
             </Link>
           </>
         )}
 
-        {location.pathname === "/signin" && <HomeButton />}
+        {(location.pathname === "/signin" ||
+          location.pathname === "/login") && <HomeButton />}
 
-        {location.pathname === "/login" && <HomeButton />}
-
-        {location.pathname === "/curso" && userId && <LogOutButton />}
+        {location.pathname === "/Courses" && userId ? (
+          <LogOutButton />
+        ) : location.pathname === "/Courses" ? (
+          <Link to="/login">
+            <button className="enterButton">
+              Inicia sesión
+            </button>
+          </Link>
+        ) : null}
       </div>
     </div>
   );

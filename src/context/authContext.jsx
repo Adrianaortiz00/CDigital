@@ -7,13 +7,10 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [token, setToken] = useState(() => localStorage.getItem("token"));
   const [userId, setUserId] = useState(() => localStorage.getItem("loggedInUserId"));
-  const [userRole, setUserRole] = useState(() => {
-    const role = localStorage.getItem("userRole");
-    return role ? JSON.parse(role) : [];
-  });
+  const [userRole, setUserRole] = useState(() =>  localStorage.getItem("UserRole"));
 
   useEffect(() => {
-    if (userId && token) {
+    if (userId && token && userRole) {
       localStorage.setItem("loggedInUserId", userId);
       localStorage.setItem("token", token);
       localStorage.setItem("userRole", JSON.stringify(userRole));

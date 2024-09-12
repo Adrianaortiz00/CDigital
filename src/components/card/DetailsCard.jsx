@@ -2,14 +2,17 @@ import DeleteButton from "../buttons/DeleteButton";
 import EditButton from "../buttons/EditButton";
 import "./detailsCard.scss";
 
-const DetailsCard = ({ description, id, onEdit, onDelete}) => {
-  console.log('DetailsCard render');
+const DetailsCard = ({ description, id, onEdit, onDelete, isAdmin }) => {
   return (
     <div className="details-container">
       <p className="description">{description}</p>
-      <div >
-      {onEdit && typeof onEdit === 'function' && <EditButton onClick={() => onEdit(id)} />}
-        <DeleteButton onClick={() => onDelete(id)} />
+      <div>
+        {isAdmin && (
+          <div className="button-container">
+            {onEdit && <EditButton onClick={onEdit} />}
+            <DeleteButton onClick={() => onDelete(id)} />
+          </div>
+        )}
       </div>
     </div>
   );

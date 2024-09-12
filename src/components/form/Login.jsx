@@ -33,7 +33,6 @@ const Login = () => {
       localStorage.setItem("token", response.data.token);
       localStorage.setItem("loggedInUserId", response.data.userId);
       localStorage.setItem("userRole", response.data.userRole);
-
       setIsOpen(true);
     },
     onError: (error) => {
